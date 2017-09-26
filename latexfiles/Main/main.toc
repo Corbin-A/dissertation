@@ -1,0 +1,40 @@
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {2}Literature Review}{2}
+\contentsline {subsection}{\numberline {2.1}Introduction}{2}
+\contentsline {subsection}{\numberline {2.2}Text Summarization}{2}
+\contentsline {subsection}{\numberline {2.3}Deep Neural Networks}{3}
+\contentsline {subsubsection}{\numberline {2.3.1}Forward Propogation}{4}
+\contentsline {subsubsection}{\numberline {2.3.2}Cost Calculation}{6}
+\contentsline {subsubsection}{\numberline {2.3.3}Backpropogation}{6}
+\contentsline {subsubsection}{\numberline {2.3.4}Gradient Descent}{7}
+\contentsline {subsubsection}{\numberline {2.3.5}DNN Conclusion}{7}
+\contentsline {subsection}{\numberline {2.4}Recurrent Neural Network}{7}
+\contentsline {subsubsection}{\numberline {2.4.1}Long Short-Term Memory}{9}
+\contentsline {subsubsection}{\numberline {2.4.2}Gated Recurrent Unit}{9}
+\contentsline {subsubsection}{\numberline {2.4.3}Bidirectional RNN}{10}
+\contentsline {subsubsection}{\numberline {2.4.4}Word Embeddings}{10}
+\contentsline {subsubsection}{\numberline {2.4.5}RNN Conclusion}{11}
+\contentsline {subsection}{\numberline {2.5}Sequence-to-Sequence}{11}
+\contentsline {subsubsection}{\numberline {2.5.1}Encoder}{12}
+\contentsline {subsubsection}{\numberline {2.5.2}Decoder}{13}
+\contentsline {subsubsection}{\numberline {2.5.3}Attentional Decoder}{13}
+\contentsline {subsubsection}{\numberline {2.5.4}Seq2Seq Conclusion}{14}
+\contentsline {subsection}{\numberline {2.6}Teacher Forcing}{15}
+\contentsline {section}{\numberline {3}Methodology}{15}
+\contentsline {subsection}{\numberline {3.1}Data and Preprocessing}{16}
+\contentsline {subsection}{\numberline {3.2}Difficulties and RNN Architecture Adjustments}{17}
+\contentsline {subsection}{\numberline {3.3}Experiment Set-up}{19}
+\contentsline {subsection}{\numberline {3.4}Evaluation Metrics}{19}
+\contentsline {subsubsection}{\numberline {3.4.1}ROUGE}{20}
+\contentsline {subsubsection}{\numberline {3.4.2}Loss Over Time}{20}
+\contentsline {subsection}{\numberline {3.5}Statistical Analysis and Data Visualization}{21}
+\contentsline {section}{\numberline {4}Results}{22}
+\contentsline {subsection}{\numberline {4.1}ROUGE Scores}{22}
+\contentsline {subsubsection}{\numberline {4.1.1}Averages}{24}
+\contentsline {subsubsection}{\numberline {4.1.2}Paired Wilcoxon Tests}{25}
+\contentsline {subsection}{\numberline {4.2}Loss over Time}{27}
+\contentsline {section}{\numberline {5}Conclusion}{29}
+\contentsline {section}{\numberline {6}Considerations for Future Work}{30}
+\contentsline {section}{Appendix \numberline {A}Data Extraction}{37}
+\contentsline {section}{Appendix \numberline {B}Training Functions}{41}
+\contentsline {section}{Appendix \numberline {C}Testing}{46}

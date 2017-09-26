@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{setspace}
+\doublespacing
+\usepackage{listings}
+\lstset{language=Python, showstringspaces=false}
+\usepackage{tikz}
+\usetikzlibrary{arrows,snakes,calc}
+\tikzstyle{input}=[circle,draw=blue!50,fill=blue!20,thick,minimum size=10mm]
+\tikzstyle{hidden}=[circle,draw=gray!50,fill=gray!20,thick,minimum size=10mm]
+\tikzstyle{output}=[rectangle,draw=orange!50,fill=orange!20,thick,minimum size=10mm]
+\tikzstyle{pre}=[<-]
+\newcommand{\ystep}{-2.5}
+
+
+\usepackage[a4paper, total={6.27in, 9.69in}]{geometry}
+\usepackage[rightcaption]{sidecap}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{url}
+\usepackage[titletoc,title]{appendix}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rdim}[2]{\mathbb{R}^{#1 \times #2}}
+\newcommand{\hyp}{h_\Theta(x)}
+\newcommand{\D}{\frac{\partial}{\partial \Theta_{i,j}^{(l)}}J(\Theta)}
+
+\graphicspath{ {../Images/} }
+
+\begin{document}
+\pagenumbering{roman}
+\input{../Preamble/title}
+\clearpage
+
+\input{../Preamble/abstract}
+\newpage
+\input{../Preamble/ack}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+\listoftables
+\newpage
+\pagenumbering{arabic}
+
+\input{../Chapters/Intro}
+\input{../Chapters/litRev}
+\input{../Chapters/method}
+\input{../Chapters/results}
+\input{../Chapters/discussion}
+
+\newpage
+
+\bibliography{../Bibliography/library}
+\bibliographystyle{ieeetr}
+
+\newpage
+
+\begin{appendices}
+  \input{../Appendicies/appens.tex}
+\end{appendices}
+
+\end{document}

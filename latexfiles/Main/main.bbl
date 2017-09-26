@@ -1,0 +1,249 @@
+\begin{thebibliography}{10}
+
+\bibitem{NationalInstituteofAging2011}
+{National Institute of Aging} and N.~i. o.~H. {National Institute on Aging},
+  ``{Alzheimer's disease: Unraveling the Mystery},'' tech. rep., National
+  Institute of Aging, 2011.
+
+\bibitem{Stanford2016}
+Stanford, ``{CS231N 2.1 Convolutional Neural Networks: Architectures,
+  Convolution / Pooling Layers},'' 2016.
+
+\bibitem{Olah2015}
+C.~Olah, ``{Understanding LSTM Networks},'' 2015.
+
+\bibitem{Gabielkov2016}
+M.~Gabielkov, A.~Ramachandran, A.~Chaintreau, M.~Gabielkov, A.~Ramachandran,
+  A.~Chaintreau, A.~Legout, S.~Clicks, M.~Gabielkov, and A.~Chaintreau,
+  ``{Social Clicks : What and Who Gets Read on Twitter ? To cite this version :
+  Social Clicks : What and Who Gets Read on Twitter ?},'' {\em SIGMETRICS
+  Perform. Eval. Rev.}, vol.~44, no.~1, pp.~179--192, 2016.
+
+\bibitem{Wenzlaff1981}
+R.~Wenzlaff, R.~M. Kerker, and A.~E. Beattie, ``{Incrimination through
+  innuendo: Can media questions become public answers?},'' {\em Journal of
+  Personality and Social Psychology}, vol.~40, no.~5, pp.~822--832, 1981.
+
+\bibitem{Ecker2014}
+U.~K.~H. Ecker, S.~Lewandowsky, E.~P. Chang, and R.~Pillai, ``{The effects of
+  subtle misinformation in news headlines.},'' {\em Journal of experimental
+  psychology. Applied}, vol.~20, no.~4, pp.~323--35, 2014.
+
+\bibitem{Rush2015}
+A.~M. Rush, S.~Chopra, and J.~Weston, ``{A Neural Attention Model for
+  Abstractive Sentence Summarization},'' {\em In Proceedings of the Conference
+  on Empirical Methods in Natural Language Processing (EMNLP)}, no.~September,
+  pp.~379--389, 2015.
+
+\bibitem{Chopra2016}
+S.~Chopra, M.~Auli, and A.~M. Rush, ``{Abstractive Sentence Summarization with
+  Attentive Recurrent Neural Networks},'' in {\em NAACL-2016}, pp.~93--98,
+  2016.
+
+\bibitem{Liu2016}
+P.~Liu and X.~Pan, ``{Text summarization with TensorFlow},'' 2016.
+
+\bibitem{Nallapati2016a}
+R.~Nallapati, B.~Zhou, C.~N. dos Santos, C.~Gulcehre, and B.~Xiang,
+  ``{Abstractive Text Summarization Using Sequence-to-Sequence RNNs and
+  Beyond},'' {\em Proceedings of CoNLL}, pp.~280--290, feb 2016.
+
+\bibitem{Luhn1958}
+H.~P. Luhn, ``{The Automatic Creation of Literature Abstracts},'' {\em IBM
+  Journal of Research and Development}, vol.~2, no.~2, pp.~159--165, 1958.
+
+\bibitem{Radev2002}
+D.~Radev, E.~Hovy, and K.~McKeown, ``{Introduction to the special issue on
+  summarization},'' {\em Computational linguistics}, vol.~28, no.~4,
+  pp.~399--408, 2002.
+
+\bibitem{LeCun1989}
+Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
+  L.~D. Jackel, ``{Backpropagation Applied to Handwritten Zip Code
+  Recognition},'' 1989.
+
+\bibitem{Mikolov2010}
+T.~Mikolov, M.~Karafi{\'{a}}t, L.~Burget, and J.~Cernock{\'{y}}, ``{Recurrent
+  neural network based language model.},'' {\em Interspeech}, 2010.
+
+\bibitem{Mikolov2011}
+T.~Mikolov and S.~Kombrink, ``{Extensions of recurrent neural network language
+  model},'' {\em Icassp}, pp.~5528--5531, 2011.
+
+\bibitem{Silver2016}
+D.~Silver, A.~Huang, C.~J. Maddison, A.~Guez, L.~Sifre, G.~van~den Driessche,
+  J.~Schrittwieser, I.~Antonoglou, V.~Panneershelvam, M.~Lanctot, S.~Dieleman,
+  D.~Grewe, J.~Nham, N.~Kalchbrenner, I.~Sutskever, T.~Lillicrap, M.~Leach,
+  K.~Kavukcuoglu, T.~Graepel, and D.~Hassabis, ``{Mastering the game of Go with
+  deep neural networks and tree search},'' {\em Nature}, vol.~529, no.~7587,
+  pp.~484--489, 2016.
+
+\bibitem{Schmidhuber2015}
+J.~Schmidhuber, ``{Deep Learning in Neural Networks: An Overview},'' {\em
+  Neural Networks}, vol.~61, pp.~85--117, 2015.
+
+\bibitem{Goodfellow2016}
+A.~{Goodfellow, Ian, Bengio, Yoshua, Courville}, ``{Deep Learning},'' 2016.
+
+\bibitem{Nair2010}
+V.~Nair and G.~E. Hinton, ``{Rectified Linear Units Improve Restricted
+  Boltzmann Machines},'' {\em Proceedings of the 27th International Conference
+  on Machine Learning}, no.~3, pp.~807--814, 2010.
+
+\bibitem{Nielsen2017}
+M.~A. Nielsen, ``{Neural networks and deep learning},'' {\em URL:
+  http://neuralnetworksanddeeplearning.com/.(visited: 01.11.2016)}, 2017.
+
+\bibitem{Elman1990}
+J.~L. Elman, ``{Finding Structure in Time},'' {\em Cognitive science}, vol.~14,
+  no.~2, pp.~179--211, 1990.
+
+\bibitem{Karpathy2015}
+A.~Karpathy, ``{The Unreasonable Effectiveness of Recurrent Neural Networks},''
+  {\em Web Page}, pp.~1--28, 2015.
+
+\bibitem{Hochreiter1991}
+J.~Hochreiter, {\em {Untersuchungen zu dynamischen neuronalen Netzen}}.
+\newblock PhD thesis, Technische Universitat, Munchen, 1991.
+
+\bibitem{Bengio1994}
+Y.~Bengio, P.~Simard, and P.~Frasconi, ``{Learning Long Term Dependencies with
+  Gradient Descent is Difficult},'' {\em IEEE Transactions on Neural Networks},
+  vol.~5, no.~2, pp.~157--166, 1994.
+
+\bibitem{Hochreiter1997}
+S.~Hochreiter and J.~Schmidhuber, ``{Long Short-Term Memory},'' {\em Neural
+  computation}, vol.~9, no.~8, pp.~1735--80, 1997.
+
+\bibitem{Cho2014}
+K.~Cho, B.~van Merrienboer, C.~Gulcehre, D.~Bahdanau, F.~Bougares, H.~Schwenk,
+  and Y.~Bengio, ``{Learning Phrase Representations using RNN Encoder-Decoder
+  for Statistical Machine Translation},'' {\em Proceedings of the 2014
+  Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+  pp.~1724--1734, 2014.
+
+\bibitem{Jozefowicz2015}
+R.~Jozefowicz, W.~Zaremba, and I.~Sutskever, ``{An Empirical Exploration of
+  Recurrent Network Architectures},'' {\em Proceedings of The 32nd
+  International Conference on Machine Learning}, vol.~37, pp.~2342--2350, 2015.
+
+\bibitem{Greff2016}
+K.~Greff, R.~K. Srivastava, J.~Koutnik, B.~R. Steunebrink, and J.~Schmidhuber,
+  ``{LSTM: A Search Space Odyssey},'' 2016.
+
+\bibitem{Schuster1997}
+M.~Schuster and K.~K. Paliwal, ``{Bidirectional recurrent neural networks},''
+  {\em IEEE Transactions on Signal Processing}, vol.~45, no.~11,
+  pp.~2673--2681, 1997.
+
+\bibitem{Mikolov2000}
+T.~Mikolov, K.~Chen, G.~Corrado, and J.~Dean, ``{Distributed Representations
+  ofWords and Phrases and their Compositionality},'' {\em CrossRef Listing of
+  Deleted DOIs}, vol.~1, pp.~1--9, 2000.
+
+\bibitem{Bengio2003}
+Y.~Bengio, R.~Ducharme, P.~Vincent, and C.~Janvin, ``{A Neural Probabilistic
+  Language Model},'' {\em The Journal of Machine Learning Research}, vol.~3,
+  pp.~1137--1155, 2003.
+
+\bibitem{Pennington2014}
+J.~Pennington, R.~Socher, and C.~D. Manning, ``{GloVe: Global Vectors for Word
+  Representation},'' {\em Proceedings of the 2014 Conference on Empirical
+  Methods in Natural Language Processing}, pp.~1532--1543, 2014.
+
+\bibitem{Mikolov2013}
+T.~Mikolov, G.~Corrado, K.~Chen, and J.~Dean, ``{Efficient Estimation of Word
+  Representations in Vector Space},'' {\em Proceedings of the International
+  Conference on Learning Representations (ICLR 2013)}, pp.~1--12, 2013.
+
+\bibitem{Sutskever2014}
+I.~Sutskever, O.~Vinyals, and Q.~V. Le, ``{Sequence to sequence learning with
+  neural networks},'' {\em Nips}, pp.~1--9, 2014.
+
+\bibitem{Bahdanau2014}
+D.~Bahdanau, K.~Cho, and Y.~Bengio, ``{Neural Machine Translation By Jointly
+  Learning To Align and Translate},'' {\em Iclr 2015}, pp.~1--15, 2014.
+
+\bibitem{Wu2016}
+Y.~Wu, M.~Schuster, Z.~Chen, Q.~V. Le, M.~Norouzi, W.~Macherey, M.~Krikun,
+  Y.~Cao, Q.~Gao, K.~Macherey, J.~Klingner, A.~Shah, M.~Johnson, X.~Liu,
+  {\L}.~Kaiser, S.~Gouws, Y.~Kato, T.~Kudo, H.~Kazawa, K.~Stevens, G.~Kurian,
+  N.~Patil, W.~Wang, C.~Young, J.~Smith, J.~Riesa, A.~Rudnick, O.~Vinyals,
+  G.~Corrado, M.~Hughes, and J.~Dean, ``{Google's Neural Machine Translation
+  System: Bridging the Gap between Human and Machine Translation},'' {\em ArXiv
+  e-prints}, pp.~1--23, 2016.
+
+\bibitem{Bahdanau2016}
+D.~Bahdanau, J.~Chorowski, D.~Serdyuk, P.~Brakel, and Y.~Bengio, ``{End-to-End
+  Attention-based Large Vocabulary Speech Recognition},'' in {\em Acoustics,
+  Speech and Signal Processing (ICASSP), 2016 IEEE International Conference
+  on}, pp.~4945--4949, 2016.
+
+\bibitem{Venugopalan2016}
+S.~Venugopalan, M.~Rohrbach, J.~Donahue, R.~Mooney, T.~Darrell, and K.~Saenko,
+  ``{Sequence to sequence - Video to text},'' in {\em Proceedings of the IEEE
+  International Conference on Computer Vision}, vol.~11-18-Dece,
+  pp.~4534--4542, 2016.
+
+\bibitem{Lopyrev2015}
+K.~Lopyrev, ``{Generating News Headlines with Recurrent Neural Networks},''
+  {\em arXiv}, pp.~1--9, 2015.
+
+\bibitem{Robertson2017}
+S.~Robertson, ``{Translation with a Sequence to Sequence Network and
+  Attention},'' 2017.
+
+\bibitem{Hu2015}
+B.~Hu, Q.~Chen, and F.~Zhu, ``{LCSTS: A Large Scale Chinese Short Text
+  Summarization Dataset},'' {\em In Proceedings of the Conference on Empirical
+  Methods in Natural Language Processing (EMNLP)}, no.~September,
+  pp.~1967--1972, 2015.
+
+\bibitem{Luong2015}
+M.-T. Luong, H.~Pham, and C.~D. Manning, ``{Effective Approaches to
+  Attention-based Neural Machine Translation},'' {\em Emnlp}, no.~September,
+  p.~11, 2015.
+
+\bibitem{Williams1989}
+R.~J. Williams and D.~Zipser, ``{A Learning Algorithm for Continually Running
+  Fully Recurrent Neural Networks},'' {\em Neural Computation}, vol.~1, no.~2,
+  pp.~270--280, 1989.
+
+\bibitem{Bengio2015}
+S.~Bengio, O.~Vinyals, N.~Jaitly, and N.~Shazeer, ``{Scheduled Sampling for
+  Sequence Prediction with Recurrent Neural Networks},'' {\em NIPS}, pp.~1--9,
+  2015.
+
+\bibitem{Howard2017}
+J.~Howard, ``{Introducing Pytorch for fast.ai},'' 2017.
+
+\bibitem{Chintala2017}
+S.~Chintala, ``{Autograd: automatic differentiation},'' 2017.
+
+\bibitem{See2017}
+A.~See, P.~J. Liu, and C.~D. Manning, ``{Get To The Point: Summarization with
+  Pointer-Generator Networks},'' {\em ACL 2017}, 2017.
+
+\bibitem{Lin2004}
+C.~Y. Lin, ``{Rouge: A package for automatic evaluation of summaries},'' {\em
+  Proceedings of the workshop on text summarization branches out (WAS 2004)},
+  no.~1, pp.~25--26, 2004.
+
+\bibitem{Kruskal1952}
+W.~H. Kruskal and W.~A. Wallis, ``{Use of Ranks in One-Criterion Variance
+  Analysis},'' {\em Journal of the American Statistical Association}, vol.~47,
+  no.~260, pp.~583--621, 1952.
+
+\bibitem{Davidson2003}
+A.~C. Davidson and D.~Kuonen, ``{An introduction to the bootstrap with
+  application in R},'' {\em Statistical Computing {\&} Statistical Graphics
+  Newsletter}, vol.~13, no.~1, pp.~6--11, 2003.
+
+\bibitem{Wilcoxon1945}
+F.~Wilcoxon, ``{Individual Comparisons by Ranking Methods},'' {\em Biometrics
+  Bulletin}, vol.~1, no.~6, p.~80, 1945.
+
+\bibitem{Ford2015}
+C.~Ford, ``{Understanding Q-Q Plots},'' 2015.
+
+\end{thebibliography}

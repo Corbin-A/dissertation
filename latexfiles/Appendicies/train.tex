@@ -1,0 +1,136 @@
+\section{Training Functions}\label{app:train}
+\begin{lstlisting}
+def train(inp, targ, encoder, decoder, enc_opt, dec_opt, crit, teacher_forcing_ratio):
+    decoder_input, encoder_outputs, hidden = encode(inp, encoder)
+    target_length = targ.size()[1]
+    
+    enc_opt.zero_grad(); dec_opt.zero_grad()
+    loss = 0
+
+    if random.random() < teacher_forcing_ratio:
+        for di in range(target_length):
+            decoder_output, hidden = decoder(decoder_input, hidden, encoder_outputs)
+            loss += crit(decoder_output, targ[:, di])
+            decoder_input = targ[:, di]
+            
+    else: # feed output for next input
+        for di in range(target_length):
+            decoder_output, hidden = decoder(decoder_input, hidden, encoder_outputs)
+            loss += crit(decoder_output, targ[:, di])
+            topv, topi = decoder_output.data.topk(1);
+            decoder_input = Variable(topi.squeeze()).cuda()
+
+    loss.backward()
+    enc_opt.step(); dec_opt.step()
+    return loss.data[0] / target_length
+
+  def trainEpochs(encoder, decoder, n_epochs, start_time, times_list, avg_loss_list, epochs_list,\
+                print_every=200, lr=0.01, plot_loss_every=20, teacher_forcing = 'graduated',):
+    print('LEARNING RATE: %f' % (lr))
+    print_loss = 0 # Reset every print_every
+    plot_loss = 0
+    
+    enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+    dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+    crit = nn.NLLLoss().cuda()
+    
+    for epoch in range(n_epochs):
+        fra, eng = get_batch(fr_train, en_train, 128)
+        inp = long_t(fra)
+        targ = long_t(eng)
+        
+        try:
+            isinstance(teacher_forcing, (str, float, int))
+        except:
+            raise TypeError
+        
+        if teacher_forcing == 'graduated':
+            teacher_forcing_ratio = 1 - epoch/n_epochs
+        elif teacher_forcing == 'full':
+            teacher_forcing_ratio = 1
+        elif teacher_forcing == 'none':
+            teacher_forcing_ratio = 0
+        elif teacher_forcing <= 1 and teacher_forcing >= 0:
+            teacher_forcing_ratio = teacher_forcing
+        else:
+            raise ValueError
+        
+        loss = train(inp, targ, encoder, decoder, enc_opt, dec_opt, crit, teacher_forcing_ratio)
+        print_loss += loss
+        plot_loss += loss
+
+        if epoch % print_every == 0 and epoch is not 0:
+            print('%s\t%d\t%d%%\t%.4f' % (time_since(start_time, epoch / n_epochs), \
+                                          epoch, epoch / n_epochs * 100, print_loss / print_every))
+            print_loss = 0
+        
+        if epoch % plot_loss_every == 0 and epoch is not 0:
+            times_list.append(calc_minutes(start_time))
+            avg_loss_list.append(plot_loss / plot_loss_every)
+            epochs_list.append(epoch)
+            plot_loss = 0
+
+  def multi_train(encoder, decoder, times_list, avg_loss_list, epochs_list, teacher_forcing_type):
+    start_time = time.time()
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.003, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.003, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.001, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.001, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.0003, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.0003, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.0001, teacher_forcing=teacher_forcing_type)
+    trainEpochs(encoder, decoder, 5000, start_time, times_list, avg_loss_list, epochs_list, lr=0.00003, teacher_forcing=teacher_forcing_type)
+
+  def fullgraduated_trainEpochs(encoder, decoder, total_epochs, start_time, times_list, avg_loss_list, epochs_list,\
+                              print_every=200, lr=0.003, plot_loss_every=20):
+    print("LEARNING RATE: %f" % (lr))
+    print_loss = 0 # Reset every print_every
+    plot_loss = 0
+    
+    enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+    dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+    crit = nn.NLLLoss().cuda()
+    
+    for epoch in range(total_epochs):
+        fra, eng = get_batch(fr_train, en_train, 128)
+        inp = long_t(fra)
+        targ = long_t(eng)
+        
+        teacher_forcing_ratio = 1 - epoch/total_epochs
+        
+        loss = train(inp, targ, encoder, decoder, enc_opt, dec_opt, crit, teacher_forcing_ratio)
+        print_loss += loss
+        plot_loss += loss
+
+        if epoch % print_every == 0 and epoch is not 0:
+            print('%s\t%d\t%d%%\t%.4f' % (time_since(start_time, epoch / total_epochs), \
+                                          epoch, epoch / total_epochs * 100, print_loss / print_every))
+            print_loss = 0
+        
+        if epoch % plot_loss_every == 0 and epoch is not 0:
+            times_list.append(calc_minutes(start_time))
+            avg_loss_list.append(plot_loss / plot_loss_every)
+            epochs_list.append(epoch)
+            plot_loss = 0
+        
+        if epoch == 10000:
+            lr = .001
+            print("LEARNING RATE: %f" % (lr))
+            enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+            dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+        elif epoch == 20000:
+            lr = .0003
+            print("LEARNING RATE: %f" % (lr))
+            enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+            dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+        elif epoch == 30000:
+            lr = .0001
+            print("LEARNING RATE: %f" % (lr))
+            enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+            dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+        elif epoch == 35000:
+            lr = .00003
+            print("LEARNING RATE: %f" % (lr))
+            enc_opt = optim.Adam(req_grad_params(encoder), lr=lr)
+            dec_opt = optim.Adam(decoder.parameters(), lr=lr)
+\end{lstlisting}

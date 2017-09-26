@@ -1,0 +1,39 @@
+\subsection{Testing}
+\begin{lstlisting}
+  def evaluate(inp):
+    decoder_input, encoder_outputs, hidden = encode(inp, encoder)
+    target_length = maxlen
+
+    decoded_words = []
+    for di in range(target_length):
+        decoder_output, hidden = decoder(decoder_input, hidden, encoder_outputs)
+        topv, topi = decoder_output.data.topk(1)
+        ni = topi[0][0];
+        if ni==PAD: break
+        decoded_words.append(en_vocab[ni])
+        decoder_input = long_t([ni])
+    
+    return decoded_words
+
+  def test(f_description):
+    parent_dir = './Dissertation/rouge_eval/'+f_description
+    ref_dir = parent_dir+'/reference/'
+    system_dir = parent_dir+'/system/'
+    
+    if not os.path.exists(ref_dir): os.makedirs(os.path.dirname(ref_dir), exist_ok=True)
+    if not os.path.exists(system_dir): os.makedirs(os.path.dirname(system_dir), exist_ok=True)
+    
+    for idx in range(len(fr_test)):
+        real_sent = [en_id2w[t] for t in en_test[idx] if t != 0]
+        if real_sent:
+            with open(ref_dir + 'news%d_reference%d' % (idx, idx), 'w') as f:
+                f.write(' '.join(real_sent))
+        else:
+            continue
+
+        ids = long_t(fr_test[idx]); ids = ids.unsqueeze(0)
+        translation = evaluate(ids)
+        with open(system_dir + 'news%d_system%d' % (idx, idx), 'w') as f:
+            f.write(' '.join(translation))
+
+\end{lstlisting}

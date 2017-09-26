@@ -1,0 +1,641 @@
+\begin{tikzpicture}
+  \node[input] [label=left:{\large{Input Layer}}](input1) at (-2.4,0) {};
+  \node[input] (input2) at (-1.2,0) {};
+  \node[input] (input3) at (0,0) {};
+  \node[input] (input4) at (1.2,0) {};
+  \node[input] (input5) at (2.4,0) {};
+  \newcommand{\layer}{1}
+  \node[hidden] (h11) at (-4.8,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+  \node[hidden] (h12) at (-3.6,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+  \node[hidden] (h13) at (-2.4,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+  \node[hidden] (h14) at (-1.2,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+  \node[hidden] (h15) at (0,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+    \node[hidden] (h16) at (1.2,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+    \node[hidden] (h17) at (2.4,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+    \node[hidden] (h18) at (3.6,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+    \node[hidden] (h19) at (4.8,\ystep) {}
+  edge [pre] (input1)
+  edge [pre] (input2)
+  edge [pre] (input3)
+  edge [pre] (input4)
+  edge [pre] (input5);
+  \renewcommand{\ystep}{-5}
+  \node[hidden] (h21) at (-4.8,\ystep) {}
+  edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+  \node[hidden] (h22) at (-3.6,\ystep) {}
+  edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+  \node[hidden] (h23) at (-2.4,\ystep) {}
+  edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+  \node[hidden] (h24) at (-1.2,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+  \node[hidden] (h25) at (0,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+   \node[hidden] (h26) at (1.2,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+   \node[hidden] (h27) at (2.4,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+   \node[hidden] (h28) at (3.6,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+   \node[hidden] (h29) at (4.8,\ystep) {}
+   edge [pre] (h11)
+  edge [pre] (h12)
+  edge [pre] (h13)
+  edge [pre] (h14)
+  edge [pre] (h15)
+  edge [pre] (h16)
+  edge [pre] (h17)
+  edge [pre] (h18)
+  edge [pre] (h19);
+  %%%%%%%%%%%%%%%%%%
+  % HIDDEN LAYER 3 %
+  %%%%%%%%%%%%%%%%%%
+  \renewcommand{\ystep}{-7.5}
+    \node[hidden] (h31) at (-7.2,\ystep) {}
+  edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+    \node[hidden] (h32) at (-6,\ystep) {}
+  edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h33) at (-4.8,\ystep) {}
+  edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h34) at (-3.6,\ystep) {}
+  edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h35) at (-2.4,\ystep) {}
+  edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h36) at (-1.2,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h37) at (0,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+   \node[hidden] (h38) at (1.2,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+   \node[hidden] (h39) at (2.4,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+   \node[hidden] (h310) at (3.6,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+   \node[hidden] (h311) at (4.8,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h312) at (6,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  \node[hidden] (h313) at (7.2,\ystep) {}
+   edge [pre] (h21)
+  edge [pre] (h22)
+  edge [pre] (h23)
+  edge [pre] (h24)
+  edge [pre] (h25)
+  edge [pre] (h26)
+  edge [pre] (h27)
+  edge [pre] (h28)
+  edge [pre] (h29);
+  %%%%%%%%%%%%%%%%%%
+  % HIDDEN LAYER 4 %
+  %%%%%%%%%%%%%%%%%%
+  \renewcommand{\ystep}{-10}
+    \node[hidden] (h41) at (-7.2,\ystep) {}
+  edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+    \node[hidden] (h42) at (-6,\ystep) {}
+  edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h43) at (-4.8,\ystep) {}
+  edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h44) at (-3.6,\ystep) {}
+  edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h45) at (-2.4,\ystep) {}
+  edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h46) at (-1.2,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h47) at (0,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h48) at (1.2,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h49) at (2.4,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h410) at (3.6,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h411) at (4.8,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h412) at (6,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+  \node[hidden] (h413) at (7.2,\ystep) {}
+   edge [pre] (h31)
+  edge [pre] (h32)
+  edge [pre] (h33)
+  edge [pre] (h34)
+  edge [pre] (h35)
+  edge [pre] (h36)
+  edge [pre] (h37)
+  edge [pre] (h38)
+  edge [pre] (h39)
+  edge [pre] (h310)
+  edge [pre] (h311)
+  edge [pre] (h312)
+  edge [pre] (h313);
+    %%%%%%%%%%%%%%%%%%
+  % HIDDEN LAYER 5 %
+  %%%%%%%%%%%%%%%%%%
+  \renewcommand{\ystep}{-12.5}
+  \node[hidden] (h51) at (-3.6,\ystep) {}
+  edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h52) at (-2.4,\ystep) {}
+  edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h53) at (-1.2,\ystep) {}
+   edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h54) at (0,\ystep) {}
+   edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h55) at (1.2,\ystep) {}
+   edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h56) at (2.4,\ystep) {}
+   edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  \node[hidden] (h57) at (3.6,\ystep) {}
+   edge [pre] (h41)
+  edge [pre] (h42)
+  edge [pre] (h43)
+  edge [pre] (h44)
+  edge [pre] (h45)
+  edge [pre] (h46)
+  edge [pre] (h47)
+  edge [pre] (h48)
+  edge [pre] (h49)
+  edge [pre] (h410)
+  edge [pre] (h411)
+  edge [pre] (h412)
+  edge [pre] (h413);
+  %%%%%%%%%%%%%%%%
+  % OUTPUT LAYER %
+  %%%%%%%%%%%%%%%%
+  \renewcommand{\ystep}{-15}
+  \node[output] [label=left:{\large{Output Layer}}](h61) at (-3.6,\ystep) {}
+  edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h62) at (-2.4,\ystep) {}
+  edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h63) at (-1.2,\ystep) {}
+   edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h64) at (0,\ystep) {}
+   edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h65) at (1.2,\ystep) {}
+   edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h66) at (2.4,\ystep) {}
+   edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[output] (h67) at (3.6,\ystep) {}
+   edge [pre] (h51)
+  edge [pre] (h52)
+  edge [pre] (h53)
+  edge [pre] (h54)
+  edge [pre] (h55)
+  edge [pre] (h56)
+  edge [pre] (h57);
+  \node[rotate=90,minimum size = 20mm] (hyp) at (-8.5,-7.5) {\large{Hidden Layers}};
+  \draw[snake=brace,segment amplitude=5pt,thick] (-8,-13) -- (-8,-2);
+    \node[rotate=270,minimum size = 20mm] (hyp) at (8.5,-8.75) {\Large{Depth}};
+    \draw[snake=brace,segment amplitude=5pt,thick] (8,-2) -- (8,-15.5);
+    \node[minimum size = 20mm] (hyp) at (0,-16.5) {\Large{Width}};
+  \draw[snake=brace,segment amplitude=5pt,thick] (7.7,-16) -- (-7.7,-16);
+\end{tikzpicture}

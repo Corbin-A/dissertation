@@ -1,0 +1,8 @@
+\contentsline {table}{\numberline {1}{\ignorespaces ROUGE-1 and ROUGE-2 scores for top performing abstractive models}}{20}
+\contentsline {table}{\numberline {2}{\ignorespaces Kruskal-Wallis ROUGE-1 and ROUGE-2 p-values for various TF methods across three tests}}{23}
+\contentsline {table}{\numberline {3}{\ignorespaces ROUGE-1 bootstrapping averages for various TF methods}}{24}
+\contentsline {table}{\numberline {4}{\ignorespaces ROUGE-2 bootstrapping averages for various TF methods}}{25}
+\contentsline {table}{\numberline {5}{\ignorespaces ROUGE paired Wilcoxon tests for various TF methods as compared to no teacher forcing}}{25}
+\contentsline {table}{\numberline {6}{\ignorespaces ROUGE paired Wilcoxon tests for various TF methods as compared to 100\% teacher forcing}}{26}
+\contentsline {table}{\numberline {7}{\ignorespaces ROUGE paired Wilcoxon tests for various TF methods as compared to graduated}}{26}
+\contentsline {table}{\numberline {8}{\ignorespaces ROUGE paired Wilcoxon tests for various TF methods as compared to reset-graduated}}{26}

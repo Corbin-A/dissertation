@@ -1,0 +1,18 @@
+\section{Conclusion}
+In the Information Age, headlines have a ever-increasing presence in our lives. They show up in mobile notifications, in search engines, and all of the world's most popular websites. Due to the influence these hyper-condensed summaries can have, it is important to try to take steps towards ameliorating some of the negative consequences of their ubiquity. That said, the NLP community still has a lot of work to do in order to get to a point where they can start to address some of these pressing issues computationally. In these beginning stages, though, there are some interesting questions to be answered, not least of which is the question of optimal training parameters. As seen through this research, picking the correct TF method can have a statistically significant impact on generative results, as well as training time and converged loss.
+
+The results of this experimentation have shown statistically significant ROUGE result improvement from using 75\% -- 100\% teacher forcing over any other methods tested. With the flexibility that PyTorch provides, there are an infinite number of TF strategies, but it's only a matter of time until we find the best way to automate and optimize it. For now, it is still a manually set variable, and typically only at 100\% out of necessity due to the restrictive nature of today's most popular deep learning libraries. For the abstractive summarization researcher who measures their success via ROUGE, however, this does not appear to be a problem. As is the case with many research projects, more questions were likely created than solved, but this opens the door to future research opportunities.
+
+Sequence-to-sequence modelling is becoming more and more sophisticated as techniques and computability improve. Still, even now, there are many open questions that need addressing and I hope that the findings of this research can be utilized within the community.
+\newpage
+\section{Considerations for Future Work}
+I believe the groundwork laid by this research leads to some interesting new questions, all of which are cause for further investigation. Some future projects may include:
+
+\begin{itemize}
+\item Running the models with greater computational resources to processes full dataset, add more encoding and decoding layers, increase hidden size, etc. See how model sophistication impacts the results found here.
+\item Try a different domain. Seq2seq models are used very frequently in Neural Machine Translation (NMT) as well. Running the various TF experiments on a new domain could uncover some interesting results.
+\item Invent new TF techniques, such as graduated steps every $n$ epochs.
+\item Try running lower TF percentages only when a model has converged as a previous arbitrary TF percentage.
+\item Implement the TF rate into PyTorch's autograd to learn, at any given iteration, whether or not TF should be allowed. Essentially turn teacher forcing into one of the tunable parameters that the model learns in order to best assist itself in minizing the model's loss.
+\item Development of a more appropriate metric to judge computational comprehension than ROUGE
+\end{itemize}

@@ -1,0 +1,113 @@
+\subsection{Preprocessing}\label{app:preproc}
+\begin{lstlisting}
+  import os, re, random, glob, pickle, collections, bcolz, numpy as np, keras, sklearn, math, operator, gc, multiprocess as mp
+  from tqdm import tqdm
+  from random import shuffle
+  from lxml import etree
+  from itertools import islice
+
+  MAX_HDLN_LEN = 30
+  NUM_ART_SENTS = 1
+  MAX_ART_LEN = 50 * NUM_ART_SENTS
+
+  pattern = re.compile(r'''
+                      # Don't care about matching beginning of string
+  (                   # Start of Conditional (...|...)
+                      ## First conditional
+  (\(\s)*             # It could start with 1 or 0 '(' followed by possible whitespace
+  \(+                 # One or More opening parentheses
+  \-?                 # Possible starting '-' (-[LR]RB-)
+  [A-Z\.,\'\`:]+      # One or More Capital letters and various punctuations
+  \-?                 # Possible ending '-' (-(Right|Left) Parenthesis-)
+  \$?                 # Zero or 1 '$'
+  \s                  # Must be followed by whitespace
+
+  |                   ## Second Conditional
+  \(\s\$\s            # ( $
+  |                   ## Third Conditional
+  \)                  # Also replace ')' with ''
+  |                   ## Fourth Conditional
+  \n
+  |                   ## Fifth Conditional
+  by\b\w+\b\w+$)      # by Author
+  ''', re.VERBOSE)
+
+  def process_data(sentence):
+    sentence = pattern.sub('', sentence)
+    sentence = re.sub(r'(\`\`)|(\'\')', '"', sentence)
+    sentence = re.sub(r'-RRB-', ')', sentence)
+    sentence = re.sub(r'-LRB-', '(', sentence)
+    sentence = re.sub(r'\.\.\.', ' ellipsis ', sentence)
+    sentence = re.sub("([\d\"().,;:/_?!—])", r' \1 ', sentence).replace('-', ' ')
+    sentence = re.sub(r'ellipsis', '...', sentence)
+    sentence = re.sub(r'  *', ' ', sentence)
+    sentence = sentence.lower().split()
+    return sentence
+
+  def extract_headline(hdln):
+    for headline in hdln.itertext():
+        headline = process_data(headline)
+        return headline
+
+  def extract_art_txt(txt, n_sents):
+    sentences = []
+    for sentence in islice(txt.itertext(), n_sents * 2):
+        if sentence is not '\n':
+            sentence = process_data(sentence)
+            sentences += sentence
+    return sentences
+
+  def write_tab_seperated(file, headlines, articles, articles_per_file):
+    global included, total, overall_total
+    tree = etree.parse(file)
+    root = tree.getroot()
+    
+    tot_arts = len(root)
+    overall_total += tot_arts
+    print(tot_arts," articles in this file. Extracting 100 article / headline pairs")
+    rand_indicies = list(range(0,len(root))); shuffle(rand_indicies)
+    
+    num_processed = 0
+    for rand_idx in rand_indicies:
+        child = root[rand_idx]
+        hdln = child.find('HEADLINE')
+        txt = child.find('TEXT')
+
+        if hdln is not None and txt is not None:
+            total += 1
+            headline = extract_headline(hdln)
+            article = extract_art_txt(txt, n_sents = NUM_ART_SENTS)
+            if len(headline) > MAX_HDLN_LEN or len(article) > MAX_ART_LEN: continue
+
+            headline = ' '.join(headline)
+            article = ' '.join(article)
+            del child; gc.collect()
+            num_processed += 1; included += 1
+            if num_processed == articles_per_file: break
+            headlines.append(headline)
+            articles.append(article)
+    del tree; gc.collect()
+
+  DATA_PATH = '/Volumes/Alex Hard Drive/anno_eng_gigaword_5/data/xml/*'
+  all_files = glob.glob(DATA_PATH); shuffle(all_files)
+
+  articles = []; headlines = []
+  included = 0
+  total = 0
+  overall_total = 0
+
+  with open('test.txt', 'w') as f:
+    f.write('')
+
+  for file in tqdm(all_files):
+    print('Parsing file: %s' % file)
+    write_tab_seperated(file, headlines, articles, articles_per_file=120)
+    percent_procd = included/total
+    print('Total articles processed: {0} of {2} ({1:.1f}%)'.format(included, percent_procd * 100, total))
+
+  with open('articles.pkl', 'wb') as f:
+    pickle.dump(articles, f)
+
+  with open('headlines.pkl', 'wb') as f:
+    pickle.dump(headlines, f)
+\end{lstlisting}

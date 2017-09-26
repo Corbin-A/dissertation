@@ -1,0 +1,18 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Example of a biological neuron}}{4}
+\contentsline {figure}{\numberline {2}{\ignorespaces Six layer deep neural network}}{5}
+\contentsline {figure}{\numberline {3}{\ignorespaces Single layer RNN}}{8}
+\contentsline {figure}{\numberline {4}{\ignorespaces RNN Mechanics}}{8}
+\contentsline {figure}{\numberline {5}{\ignorespaces Original LSTM}}{9}
+\contentsline {figure}{\numberline {6}{\ignorespaces GRU}}{9}
+\contentsline {figure}{\numberline {7}{\ignorespaces Bidirectional RNN}}{10}
+\contentsline {figure}{\numberline {8}{\ignorespaces Basic seq2seq model}}{12}
+\contentsline {figure}{\numberline {9}{\ignorespaces Seq2seq encoder diagram}}{12}
+\contentsline {figure}{\numberline {10}{\ignorespaces Seq2seq decoder diagram}}{13}
+\contentsline {figure}{\numberline {11}{\ignorespaces Attentional word diagram for English to French Translation}}{14}
+\contentsline {figure}{\numberline {12}{\ignorespaces A preprocessed headline and article pair with zero-padding.}}{17}
+\contentsline {figure}{\numberline {13}{\ignorespaces Histograms of ROUGE-1 scores from all TF methods of Test 2}}{22}
+\contentsline {figure}{\numberline {14}{\ignorespaces Histograms of ROUGE-2 scores from all TF methods of Test 2}}{23}
+\contentsline {figure}{\numberline {15}{\ignorespaces Q-Q Plots of ROUGE-1 scores for each TF Method of Test 2}}{24}
+\contentsline {figure}{\numberline {16}{\ignorespaces Average loss over time for every TF method for test 1}}{27}
+\contentsline {figure}{\numberline {17}{\ignorespaces Average loss over time for every TF method for test 2}}{27}
+\contentsline {figure}{\numberline {18}{\ignorespaces Average loss over time for every TF method for test 3}}{28}
